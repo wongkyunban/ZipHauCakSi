@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.wong.test.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="接口URL"
+        android:id="@+id/url1"
+        android:textSize="16dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/url1"
+        android:text="http://192.168.0.68:8081/Mobile"
+        android:id="@+id/url"/>
+   <TextView
+        android:layout_below="@id/url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="参数"
+        android:textSize="16dp"
+        android:id="@+id/arg1"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/arg1"
+        android:layout_below="@id/url"
+        android:id="@+id/arg"/>
+
+   <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/arg1"
+        android:layout_alignEnd="@id/arg"
+        android:text="发送"
+        android:textColor="@color/white"
+        android:background="@drawable/login_btn_bg"
+       android:layout_below="@id/arg"
+        android:id="@+id/btn"/>
+    <TextView
+        android:layout_below="@id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="返回结果："
+        android:textSize="16dp"
+        android:id="@+id/rs"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rs">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/ret"/>
+
+    </ScrollView>
+</RelativeLayout>
